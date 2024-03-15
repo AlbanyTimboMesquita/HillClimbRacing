@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
     private GameObject player;
     [SerializeField] private Transform startPoint,endPoint;
+    public int currentScore;
     void Awake()
     {
        player = GameObject.FindGameObjectWithTag("Player"); 

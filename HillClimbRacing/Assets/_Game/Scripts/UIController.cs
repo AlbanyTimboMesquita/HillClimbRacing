@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    public TMP_Text txtDistance;
+    public TMP_Text txtDistance,txtCoins;
     [SerializeField] private Image imgFuel;
     private GameController gameController;
     private void Awake() {
@@ -22,6 +22,7 @@ public class UIController : MonoBehaviour
     {
       txtDistance.text = gameController.CalculatePlayerDistance().ToString("0")+" / "+gameController.CalculateDistance().ToString("0"); 
        UpdateImageFuel();
+       
     }
     void UpdateImageFuel(){
         imgFuel.fillAmount = gameController.UpdateFuel();
