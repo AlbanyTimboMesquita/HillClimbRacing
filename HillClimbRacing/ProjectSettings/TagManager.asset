@@ -6,6 +6,7 @@ TagManager:
   tags:
   - EndPoint
   - Coin
+  - Ground
   layers:
   - Default
   - TransparentFX
