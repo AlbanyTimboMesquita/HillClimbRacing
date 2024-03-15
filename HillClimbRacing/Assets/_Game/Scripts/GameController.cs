@@ -27,4 +27,7 @@ public class GameController : MonoBehaviour
     public float CalculatePlayerDistance(){
         return player.transform.position.x - startPoint.position.x;
     }
+    public float UpdateFuel(){
+        return player.GetComponent<VehicleController>().fuel;
+    }
 }
