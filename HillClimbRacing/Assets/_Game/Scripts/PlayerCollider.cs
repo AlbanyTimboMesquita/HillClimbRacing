@@ -13,7 +13,14 @@ public class PlayerCollider : MonoBehaviour
             FindObjectOfType<UIController>().txtCoins.text=FindObjectOfType<GameController>().currentScore.ToString();
             FindObjectOfType<SoundController>().PlaySound(FindObjectOfType<SoundController>().coinAudioSource);
             //Debug.Log(target.GetComponent<Coin>().value);
-            target.gameObject.SetActive(false);
+            //target.gameObject.SetActive(false);
+            target.GetComponent<Animator>().SetTrigger("Collected");
+            Destroy(target.gameObject,5);
+        }else if(target.gameObject.CompareTag("Fuel")){
+            this.gameObject.transform.parent.GetComponent<VehicleController>().fuel=target.GetComponent<Fuel>().value;
+            //target.gameObject.SetActive(false);
+            target.GetComponent<Animator>().SetTrigger("Collected");
+            Destroy(target.gameObject,5);
         }
     }
 }

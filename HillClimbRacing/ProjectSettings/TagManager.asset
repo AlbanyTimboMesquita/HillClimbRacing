@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Gas
   - Brake
+  - Fuel
   layers:
   - Default
   - TransparentFX
